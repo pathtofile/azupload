@@ -22,7 +22,11 @@ tl;dr:
 4. Copy Primary Key, and set as `WORKSPACE_SHARED_KEY`
 
 # Build
+Either grab the latest pre-build from [the releases page](https://github.com/pathtofile/azupload/releases)
+or build it yourself:
 ```bash
+git checkout https://github.com/pathtofile/azupload.git
+cd azupload
 go build
 ```
 
