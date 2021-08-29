@@ -1,13 +1,13 @@
 # AzUpload
 
 Simple project that takes arbitrary JSON from stdin (1 per line) and uploads it to
-Azure Monitor.
-
-This can be used to pipe JSON for a programs stdout into Azure Monitor, without needing
+Azure Monitor. This can be used to pipe JSON for a programs stdout into Azure Monitor, without needing
 to 'cache' it to disk.
 
 I don't think the Microsoft-supplied tools can easily read from stdin, however this was mostly
 an execuse to learn Go.
+
+I'm using this to send [Tracee events](https://github.com/aquasecurity/tracee/tree/main/tracee-ebpf) to Azure.
 
 # Setup
 In Azure, first create a Log Analytics workspace.
@@ -32,6 +32,10 @@ go build
 
 # Run
 ```bash
+# Set environment variables
+export WORKSPACE_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+export WORKSPACE_SHARED_KEY="aaaaaaaaaaaaa=="
+
 # Get a program that outputs JSON events 1 per line
 # If data is in a file, just use cat
 $> cat events.json
