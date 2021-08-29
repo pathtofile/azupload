@@ -33,8 +33,8 @@ go build
 # Run
 ```bash
 # Set environment variables
-export WORKSPACE_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-export WORKSPACE_SHARED_KEY="aaaaaaaaaaaaa=="
+$> export WORKSPACE_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$> export WORKSPACE_SHARED_KEY="aaaaaaaaaaaaa=="
 
 # Get a program that outputs JSON events 1 per line
 # If data is in a file, just use cat
